@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Video Widget</string>
+    <string name="widget_description">فيديو متحرك عند فتح الهاتف</string>
+    <string name="choose_video">اختر فيديو</string>
+    <string name="video_selected">تم اختيار الفيديو ✓</string>
+    <string name="no_video">لم يتم اختيار فيديو</string>
+    <string name="processing">جاري معالجة الفيديو...</string>
+    <string name="ready">جاهز ✓ أضف الويدجت للشاشة</string>
+    <string name="reset">إعادة تعيين</string>
+</resources>
