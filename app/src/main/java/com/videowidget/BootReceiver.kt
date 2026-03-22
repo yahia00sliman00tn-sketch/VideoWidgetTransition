@@ -7,8 +7,7 @@ import android.content.Intent
 class BootReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         if (intent.action == Intent.ACTION_BOOT_COMPLETED) {
-            // أعد تشغيل الـ Service بعد إعادة التشغيل
-            val serviceIntent = Intent(context, WidgetAnimService::class.java)
+            val serviceIntent = Intent(context, OverlayService::class.java)
             context.startForegroundService(serviceIntent)
         }
     }

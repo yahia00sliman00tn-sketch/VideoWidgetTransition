@@ -33,7 +33,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Video Widget"
+                android:text="Video Overlay"
                 android:textColor="#FFFFFF"
                 android:textSize="28sp"
                 android:textStyle="bold"
@@ -71,17 +71,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/no_video"
                     android:textColor="#FFFFFF"
-                    android:textSize="16sp"
-                    android:layout_marginBottom="8dp"/>
-
-                <!-- Progress bar للمعالجة -->
-                <ProgressBar
-                    android:id="@+id/progressBar"
-                    android:layout_width="match_parent"
-                    android:layout_height="8dp"
-                    android:visibility="gone"
-                    style="@android:style/Widget.ProgressBar.Horizontal"
-                    android:max="100"/>
+                    android:textSize="16sp"/>
 
             </LinearLayout>
 
@@ -114,6 +104,19 @@
 
             </LinearLayout>
 
+            <!-- زر التشغيل/الإيقاف -->
+            <Button
+                android:id="@+id/btnToggle"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="▶ تشغيل"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:background="@drawable/btn_primary"
+                android:enabled="false"
+                android:layout_marginBottom="12dp"/>
+
             <!-- زر Reset -->
             <Button
                 android:id="@+id/btnReset"
@@ -128,7 +131,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Frame 0 = Lock  •  Last Frame = Home"
+                android:text="الفيديو يعمل مرة واحدة عند فتح القفل"
                 android:textColor="#40FFFFFF"
                 android:textSize="12sp"/>
 
