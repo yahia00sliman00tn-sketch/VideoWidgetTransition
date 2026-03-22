@@ -110,12 +110,21 @@ class MainActivity : AppCompatActivity() {
                     )
 
                     if (bitmap != null) {
-                        // اضغط وحفظ
+                        // صغّر الصورة لتناسب الـ Widget
+                        val maxSize = 360
+                        val scale = minOf(maxSize.toFloat()/bitmap.width, maxSize.toFloat()/bitmap.height)
+                        val scaled = android.graphics.Bitmap.createScaledBitmap(
+                            bitmap,
+                            (bitmap.width * scale).toInt(),
+                            (bitmap.height * scale).toInt(),
+                            true
+                        )
+                        bitmap.recycle()
                         val file = File(framesDir, "frame_$i.jpg")
                         FileOutputStream(file).use { out ->
-                            bitmap.compress(Bitmap.CompressFormat.JPEG, 85, out)
+                            scaled.compress(Bitmap.CompressFormat.JPEG, 75, out)
                         }
-                        bitmap.recycle()
+                        scaled.recycle()
                     }
 
                     val progress = ((i + 1) * 100 / frameCount)
